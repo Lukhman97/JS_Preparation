@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:linear-gradient(to right,#d86363,rgb(223, 223, 74),hwb(350 75% 0%),#47f747)
+        }
+        .card{
+            width: 500px;
+            height: 800px;
+            background-color:white;
+            margin-top: 50px;
+            margin-left: 600px;
+            border-radius: 20px;
+        }
+        img{
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+        }
+        h1{
+            text-shadow:#05f632;
+           
+        
+        }
+        label{
+            margin-left: 10px;font-weight: bold;
+            color:black;
+        }
+        input{
+            margin-left: 10px;
+            width: 450px;
+            height: 30px;
+            font-size: 15px;
+            border-radius: 3px;
+        }
+        button{
+            width: 120px;
+            height: 50px;
+            margin-left:150px;
+            background-color: rgb(163, 163, 234);
+            border-radius: 10px;
+
+        }
+        #extra{
+            color: red;
+            margin-left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="section">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.k2G4aD7hSiWRwhAF3kqXfwHaEC?pid=Api&P=0&h=180" alt="caliculator">
+            <h1 style="margin-left: 100px; color: hsl(305, 89%, 51%);font-weight: bold;">TIP CALICULATOR</h1>
+        </div>
+        <div class="sec">
+            <label for="">BILL AMOUNT</label> <br>
+            <input type="text" placeholder="Enter Bill amount" id="billamount"> <br><br>
+
+            <label for="">PERCENTAGE TIP</label><br>
+            <input type="text" placeholder="Enter Tip amount" id="tipamount"> <br><br>
+
+            <label for="">TIP AMOUNT</label> <br>
+            <input type="text" placeholder="Enter your bill and wait...." id="display_tip"> <br><br>
+
+            <label for="">TOTAL AMOUNT</label> <br>
+            <input type="text" placeholder="Enter your bill and wait...." id="display_total"><br><br>
+
+            <button onclick="getdata()">CALCULATE</button>
+            <div id="extra"></div>
+
+            
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+       function getdata(){
+        var amount=document.getElementById("billamount").value;
+        if(Number(amount)<=0 && Number(amount)<=100000000000){
+            var info=document.getElementById("extra")
+            info.innerHTML="<p>Please enter the valid amount</p>"
+        }
+        console.log(amount)
+        var tipamount=document.getElementById("tipamount").value;
+        if(Number(tipamount)<=0 && Number(tipamount)<=100000000000){
+            var info=document.getElementById("extra")
+            info.innerHTML="<p>Please enter the valid amount</p>"
+        }
+        console.log(tipamount)
+
+        var display_tip=document.getElementById("display_tip").value=tipamount
+
+        var display_total=document.getElementById("display_total").value=Number(amount)+Number(tipamount)
+       }
+       
+    </script>
+</body>
+</html>
