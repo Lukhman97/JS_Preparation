@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial;
+}
+
+/* Main section */
+.section {
+    width: 600px;
+    padding: 30px;
+    background: lightblue;
+    border-radius: 20px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Boxes */
+.box {
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Colors */
+.box1 { background-color: #da0a0a; }
+.box2 { background-color: #2e09b7; }
+.box3 { background-color: #0eee68; }
+.box4 { background-color: #fffb00; }
+
+/* Title */
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Block (FULL WIDTH FIXED) */
+.block {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    margin: 20px 0;   /* spacing */
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color:white
+}
+
+/* Text */
+.change2 {
+    font-size: 18px;
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="section">
+    
+    <h1>COLOR PICKER</h1>
+
+    <div class="container">
+        <div class="box box1" id="box1">#da0a0a</div>
+        <div class="box box2" id="box2">#2e09b7</div>
+        <div class="box box3" id="box3">#0eee68</div>
+        <div class="box box4" id="box4">#fffb00</div>
+    </div>
+
+    <div id="change">
+        <div class="block" id="display">Selected Color</div>
+    </div>
+
+    <div class="change2">
+        Try clicking on one of the colors above to change the background
+    </div>
+
+</div>
+    <script>
+        var red=document.getElementById("box1")
+        var blue=document.getElementById("box2")
+        var green=document.getElementById("box3")
+        var yellow=document.getElementById("box4")
+        
+        var display=document.getElementById("display")
+
+        red.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#da0a0a";
+            display.innerText = `BACKGROUND COLOR :#da0a0a`;
+        });
+
+        blue.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#2e09b7";
+            display.innerText = `BACKGROUND COLOR :#2e09b7`;
+        });
+
+        green.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#0eee68";
+            display.innerText = `BACKGROUND COLOR :#0eee68`;
+        });
+
+        yellow.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#fffb00";
+            display.innerText = `BACKGROUND COLOR : #fffb00`;
+        });
+
+    </script>
+</body>
+</html>
