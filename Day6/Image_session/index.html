@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seasons</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(135deg, #a1c4fd, #c2ffd8);
+}
+
+.section {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/* Center Image */
+#mainImage {
+    width: 500px;
+    height: 350px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Small images */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.images img {
+    width: 200px;
+    height: 220px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.allbuttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="section">
+
+    <img id="mainImage" src="https://img.freepik.com/premium-photo/tree-background-generative-ai_627719-1191.jpg">
+
+    <div class="images" style="display: none;">
+        <img src="https://img.freepik.com/premium-photo/tree-background-generative-ai_627719-1191.jpg" onclick="change(this)">
+        <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" onclick="change(this)">
+        <img src="https://images6.alphacoders.com/100/1008483.jpg" onclick="change(this)">
+        <img src="https://img.freepik.com/premium-photo/beautiful-tree-rainy-weather_1074212-48506.jpg?w=2000" onclick="change(this)">
+    </div>
+
+
+    <div class="allbuttons">
+        <button onclick="spring()">SPRING</button>
+        <button onclick="summer()">SUMMER</button>
+        <button onclick="winter()">WINTER</button>
+        <button onclick="rainy()">RAINY</button>
+    </div>
+
+</div>
+
+<script>
+
+function change(el) {
+    document.getElementById("mainImage").src = el.src;
+}
+
+function spring() {
+    document.getElementById("mainImage").src =
+    "https://img.freepik.com/premium-photo/tree-background-generative-ai_627719-1191.jpg";
+}
+
+function summer() {
+    document.getElementById("mainImage").src =
+    "https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg";
+}
+
+function winter() {
+    document.getElementById("mainImage").src =
+    "https://images6.alphacoders.com/100/1008483.jpg";
+}
+
+function rainy() {
+    document.getElementById("mainImage").src =
+    "https://img.freepik.com/premium-photo/beautiful-tree-rainy-weather_1074212-48506.jpg?w=2000";
+}
+
+</script>
+
+</body>
+</html>

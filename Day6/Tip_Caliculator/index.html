@@ -4,53 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background:linear-gradient(to right,#d86363,rgb(223, 223, 74),hwb(350 75% 0%),#47f747)
-        }
-        .card{
-            width: 500px;
-            height: 800px;
-            background-color:white;
-            margin-top: 50px;
-            margin-left: 600px;
-            border-radius: 20px;
-        }
-        img{
-            border-radius: 10px;
-            width: 500px;
-            height: 300px;
-        }
-        h1{
-            text-shadow:#05f632;
-           
-        
-        }
-        label{
-            margin-left: 10px;font-weight: bold;
-            color:black;
-        }
-        input{
-            margin-left: 10px;
-            width: 450px;
-            height: 30px;
-            font-size: 15px;
-            border-radius: 3px;
-        }
-        button{
-            width: 120px;
-            height: 50px;
-            margin-left:150px;
-            background-color: rgb(163, 163, 234);
-            border-radius: 10px;
+<style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        }
-        #extra{
-            color: red;
-            margin-left: 100px;
-        }
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd, #c2ffd8);
+}
 
-    </style>
+/* Card Design */
+.card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+img {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding: 5px 10px;
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+input:focus {
+    background: #fff;
+    box-shadow: 0 0 5px #6c63ff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #6c63ff, #5ee7df);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Error text */
+#extra {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+</style>
 </head>
 <body>
     <div class="card">
