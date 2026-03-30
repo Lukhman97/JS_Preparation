@@ -3,10 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sizing an image</title>
+<title>Sizing an Image</title>
 
 <style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    background: linear-gradient(135deg, #a1c4fd, #c2ffd8);
+}
 
+/* Card */
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Image */
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+/* Buttons container */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6c63ff, #5ee7df);
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Value box */
+#value {
+    background: #f1f1f1;
+    color: black;
+    min-width: 80px;
+}
+
+/* Info message */
+#addcontent {
+    height: 20px;
+    font-weight: bold;
+}
+
+/* Size text */
+#one {
+    margin: 10px 0;
+    font-weight: bold;
+}
 </style>
 
 </head>
@@ -14,14 +84,67 @@
 <body>
 
 <div class="section">
-    
-    <h1>Sizing an Image</h1>
 
-    
+    <h2>Sizing an Image</h2>
+
+    <p>
+        Click + to increase and - to decrease the image size by 5px.
+    </p>
+
+    <div id="addcontent"></div>
+
+    <img src="https://static.vecteezy.com/system/resources/previews/030/696/801/large_2x/dog-image-hd-free-photo.jpg" id="image">
+
+    <div id="one"></div>
+
+    <div class="controls">
+        <button onclick="decrease()">-</button>
+        <button id="value">300px</button>
+        <button onclick="increase()">+</button>
+    </div>
 
 </div>
-    <script>
-       
-    </script>
+
+<script>
+
+let size = 300;
+
+let info = document.getElementById("addcontent");
+let image = document.getElementById("image");
+let one = document.getElementById("one");
+let value = document.getElementById("value");
+
+// initial
+one.innerText = size + "px";
+
+function increase() {
+    if (size >= 700) {
+        info.innerText = "Too big! Decrease the size";
+        info.style.color = "red";
+    } else {
+        size += 5;
+        info.innerText = "";
+    }
+
+    image.style.width = size + "px";
+    image.style.height = size + "px";
+    value.innerText = size + "px";
+    one.innerText = size + "px";
+}
+
+function decrease() {
+    if (size > 50) {
+        size -= 5;
+        info.innerText = "";
+    }
+
+    image.style.width = size + "px";
+    image.style.height = size + "px";
+    value.innerText = size + "px";
+    one.innerText = size + "px";
+}
+
+</script>
+
 </body>
 </html>
