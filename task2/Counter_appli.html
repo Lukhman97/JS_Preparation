@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Counter</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card */
+.container {
+    width: 360px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: 0.4s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Top Box */
+.one {
+    height: 150px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.title {
+    margin-top: 15px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    margin-top: 25px;
+}
+
+.btn {
+    flex: 1;
+    margin: 5px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Colors */
+.primary { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+.success { background: linear-gradient(135deg, #00b09b, #96c93d); }
+.danger  { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+
+/* Hover */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="one" id="counter">0</div>
+
+    <div class="title">
+        Counter App 🚀
+    </div>
+
+    <div class="btn-group">
+        <button class="btn primary" onclick="increment()">Increment</button>
+        <button class="btn success" onclick="decrement()">Decrement</button>
+        <button class="btn danger" onclick="reset()">Reset</button>
+    </div>
+</div>
+
+<script>
+let count = 0;
+
+function increment() {
+    count++;
+    if(count>0){
+        document.getElementById("counter").style.color="white"
+        document.getElementById("counter").textContent = count
+    }
+  else{
+      document.getElementById("counter").textContent = count;
+  }
+}
+
+function decrement() {
+    count--;
+    if(count<0){
+        document.getElementById("counter").style.color="red"
+        document.getElementById("counter").textContent = count
+    }
+  else{
+      document.getElementById("counter").textContent = count;
+  }
+}
+
+function reset() {
+    count = 0;
+    if(count<0){
+        document.getElementById("counter").style.color="red"
+        document.getElementById("counter").textContent = count
+    }
+  else{
+      document.getElementById("counter").textContent = count;
+  }
+}
+</script>
+
+</body>
+</html>
