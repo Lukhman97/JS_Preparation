@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+
+    <style>
+
+        /* Page center + background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .section {
+            text-align: center;
+        }
+
+        /* Layout */
+        .main{
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        button {
+            width: 200px;
+            height: 50px;
+
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+
+            background: linear-gradient(135deg, #6c63ff, #5ee7df);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Traffic light box */
+        .lights{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            background-color: #111;
+            width: 160px;
+            height: 350px;
+            border-radius: 30px;
+            padding: 15px 0;
+
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        /* Lights */
+        .col{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #333;
+
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+            transition: 0.3s;
+        }
+
+    </style>
+</head> 
+<body>
+
+    <div class="section">
+        <h1>🚦 Traffic Light</h1>
+
+        <div class="main">
+
+            <div class="buttons">
+                <button onclick="stop()">STOP</button>
+                <button onclick="ready()">READY</button>
+                <button onclick="go()">GO</button>
+            </div>
+
+            <div class="lights">
+                <div class="col" id="col1"></div>
+                <div class="col" id="col2"></div>
+                <div class="col" id="col3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var col1=document.getElementById("col1")
+        var col2=document.getElementById("col2")
+        var col3=document.getElementById("col3")
+
+        let status=false
+        function stop(){
+            if(status){
+                status=false
+            }
+            else{
+                col1.style.backgroundColor="red"
+                setTimeout(()=>{
+                    col1.style.backgroundColor="black"
+                },6000)
+            }
+        }
+
+        function ready(){
+            if(status){
+                status=false
+            }
+            else{
+                col2.style.backgroundColor="orange"
+                setTimeout(()=>{
+                    col2.style.backgroundColor="black"
+                },6000)
+            }
+        }
+
+        function go(){
+            if(status){
+                status=false
+            }
+            else{
+                col3.style.backgroundColor="green"
+                setTimeout(()=>{
+                    col3.style.backgroundColor="black"
+                },6000)
+            }
+        }
+    </script>
+
+</body>
+</html>
