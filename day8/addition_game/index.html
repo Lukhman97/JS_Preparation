@@ -5,54 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .cont{
-            height: 670px;
-            width: 400px;
-            margin-top: 10px;
-            margin-left: 300px;
-            background-color: lightcyan;
-            border: 5px solid antiquewhite;
-        }
-        img{
-            width: 400px;
-            height: 400px;
-        }
-        input{
-            width: 70px;
-            height: 70px;
-            background-color: white;
-            color:black;
-            border-radius: 5px;
-            font-size: 30px;
-            padding-left: 15px;
-            
+        .cont {
+    height: 450px;
+    width: 350px;
+    margin: 40px auto;
+    background-color: #f9fbfc;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+}
 
-        }
-        .one{
-            /* text-align: center; */
-            margin-left: 30px;
-            margin-top: 40px;
-        }
-        span{
-            font-size: 30px;
-            font-weight: bold;
-        }
-        button{
-            width: 60px;
-            height: 60px;
-            background-color: blue;
-            /* text-align: center; */
-            color: white;
-            margin-left: 70px;
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-        .two{
-            margin-left: 30px;
-            margin-top: 10px;
-            color: green;
-            font-size: 20px;
-        }
+img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 60px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.one {
+    margin-top: 20px;
+}
+
+span {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.two {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
@@ -85,20 +96,22 @@
         document.getElementById("num2").value=num12
 
         function checking(){
+            num4=""
             let num3=Number(document.getElementById("num3").value)
-           if ((num11+num12)===num3){
-            two.innerHTML="You are correct!!!!!"
+            if ((num11+num12)===num3){
+            two.innerHTML="You are correct"
            }
-           else if(num11+num12>=num3){
+           else if (num3==num4) {
+        two.innerHTML = "Enter the number first";
+            }
+           else if(num11+num12<=num3){
             two.innerHTML="You are to high!!!!"
-            // two.innerHTML=`${num3},${num11+num12}`
+            
            }
-            else if(num11+num12<=num3){
+            else if(num11+num12>=num3){
             two.innerHTML="You are to low!!!!"
            }
-           else if(num11+num12===null){
-            two.innerHTML="Enter the Number fst"
-           }
+           
            else{
             two.innerHTML="Enter a valid number!!!!"
            }
