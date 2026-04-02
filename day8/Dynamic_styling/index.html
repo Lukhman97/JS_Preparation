@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: azure;
+            border: 5px double yellow;
+            padding-left: 50px;
+            width: 400px;
+            height: 600px;
+            margin-left: 400px;
+
+        }
+        .container h1{
+            padding-left: 100px;
+        }
+        label{
+            color: gray;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-left: -10px;
+        }
+        .btn{
+            background-color: blue;
+            font-weight: bold;
+            color: white;
+            width: 60px;
+            height: 30px;
+            border-radius: 10px;
+            margin-left: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Button Maker</h1>
+        <div class="cont1">
+            <label for="background">BACKGROUND COLOR</label> <br>
+            <input type="text" placeholder="Enter the background color" id="background"> <br> <br>
+
+            <label for="font">FONT COLOR</label> <br>
+            <input type="text" name="" id="font" placeholder="Enter Font color"> <br> <br>
+
+            <label for="size">FONT SIZE(in px)</label> <br>
+            <input type="number" name="" id="size" placeholder="Enter Font size"> <br> <br>
+
+            <label for="weight">FONT WEIGHT</label> <br>
+            <input type="text" name="" id="weight" placeholder="Enter Font weight"> <br>
+
+            <label for="padding">PADDING(in px)</label> <br>
+            <input type="number" name="" id="padding" placeholder="Enter the PADDING "> <br><br>
+
+
+            <label for="border">BORDER RADIUS(in px)</label> <br>
+            <input type="number" id="border" placeholder="Enter border-radius"> <br> <br>
+
+            <button  class="btn" onclick="apply()">Apply</button> <br><br>
+
+            <button id="custom">CUSTOM BUTTON</button>
+        </div>
+
+    </div>
+    <script>
+        function apply(){
+            let background=String(document.getElementById("background").value)
+            let font=String(document.getElementById("font").value)
+            let size=Number(document.getElementById("size").value)
+            let weight=String(document.getElementById("weight").value)
+            let padding=Number(document.getElementById("padding").value)
+            let border=Number(document.getElementById("border").value)
+            let custom=document.getElementById("custom")
+
+
+            custom.style.backgroundColor=background
+            custom.style.color=font
+            custom.style.fontSize=size +"px"
+            custom.style.fontWeight=weight 
+            custom.style.padding=padding  + "px"
+            custom.style.borderRadius=border +"px"
+
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>
