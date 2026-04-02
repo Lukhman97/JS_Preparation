@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varanasi</title>
+
+    <!-- ✅ Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .block1{
+            background-color: #f4efef;
+            color: black;
+            width: 420px;
+            height: 650px;
+            border: 5px solid black;
+            margin: auto;
+            margin-top: 40px;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            margin-left: 10px;
+        }
+        img{
+            width: 100%;
+            height: 250px;
+        }
+        #matter{
+            margin-top: 10px;
+            padding: 5px;
+        }
+        .btn-group{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block1">
+        <h1>Varanasi</h1>
+
+        <p>
+            The city is very commonly referred to as City of Temples, Holy City of India, 
+            Religious Capital of India and City of Learning
+        </p>
+
+        <img src="./img1.png" id="image">
+
+        <!-- ✅ Bootstrap Buttons -->
+        <div class="btn-group d-flex justify-content-around">
+            <button class="btn btn-primary" onclick="about()">About</button>
+            <button class="btn btn-success" onclick="visit()">Time to Visit</button>
+            <button class="btn btn-warning" onclick="attra()">Attractive</button>
+        </div>
+
+        <div id="matter">
+            Varanasi is one of the oldest living cities in the world. Its prominence in Hindu mythology is virtually unrivaled. Mark Twain, the English author, who was enthralled by the legend and sanctity of Benares, once wrote, "Benares is older than history, older than tradition, older even than legend and looks twice as old as all of them put together".
+        </div>
+    </div>
+
+    <script>
+        let image = document.getElementById("image")
+        let matter = document.getElementById("matter")
+
+        function about(){
+            image.src = "./img1.png"
+            matter.innerHTML = "Varanasi is one of the oldest living cities in the world. Its prominence in Hindu mythology is virtually unrivaled. Mark Twain, the English author, who was enthralled by the legend and sanctity of Benares, once wrote, 'Benares is older than history, older than tradition, older even than legend and looks twice as old as all of them put together'."
+        }
+
+        function visit(){
+            image.src = "./img2.png"
+            matter.innerHTML = "October to March is the best time to visit Varanasi because most of the fairs here are held during this time. Festivities begin with Diwali and continue to Dev Diwali. During this time, the ghats are lit with lights and diyas, creating a beautiful view."
+        }
+
+        function attra(){
+            image.src = "./image.png"
+            matter.innerHTML = "When visiting Varanasi, one comes across many ghats. Dashashwamedh Ghat is one of the oldest and most important. Another major attraction is the River Ganges, considered the holiest river by Hindus."
+        }
+    </script>
+
+</body>
+</html>
