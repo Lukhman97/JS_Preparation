@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form action="" ></form>
+        <label for="email">Username/email</label>
+        <input type="text" id="email"placeholder="Enter username/email"> <br><br>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Enter Your password">
+         <input type="submit" onclick="return validate()" value="Login">
+    </body>
+    <script>
+        function validate(){
+            let username=document.getElementById("email").value 
+        let password=document.getElementById("pass").value
+
+            sessionStorage.setItem(username,password)
+            // sessionStorage.removeItem
+        if(username==="lukhman" && password==="143786"){
+            window.location.href="./home.html"
+            return false
+        }
+        else{
+            alert("Login failed try again!!!")
+            return false
+        }
+        }  
+         </script>
+</html>

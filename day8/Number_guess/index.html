@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guessing Game</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .box {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    input {
+        width: 80%;
+        padding: 8px;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #container {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Guess a Number (1 to 100)</h1>
+
+<div class="box">
+    <input type="number" id="num" placeholder="Enter number"><br>
+    <button onclick="validate()">Check</button>
+    <div id="container"></div>
+</div>
+
+<script>
+let ran_num = Math.ceil(Math.random() * 100);
+
+function validate() {
+    let num = Number(document.getElementById("num").value);
+    let container = document.getElementById("container");
+
+    if (num === ran_num) {
+        container.innerHTML = "Correct Guess 🎉";
+    } 
+    else if (num > ran_num) {
+        container.innerHTML = "Too High ⬆️";
+    } 
+    else if (num < ran_num) {
+        container.innerHTML = "Too Low ⬇️";
+    } 
+    else {
+        container.innerHTML = "Enter a valid number";
+    }
+}
+</script>
+
+</body>
+</html>
