@@ -16,11 +16,11 @@
     </body>
     <script>
         function validate(){
-            let username=document.getElementById("email").value 
+        let username=document.getElementById("email").value 
         let password=document.getElementById("pass").value
 
             sessionStorage.setItem(username,password)
-            // sessionStorage.removeItem
+           
         if(username==="lukhman" && password==="143786"){
             window.location.href="./home.html"
             return false
