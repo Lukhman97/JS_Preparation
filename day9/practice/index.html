@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+            color: white;
+        }
+
+        .save {
+            background: #28a745;
+        }
+
+        .clear {
+            background: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Local Storage</h2>
+
+        <input type="text" id="data" placeholder="Type something...">
+        
+        <button class="save" onclick="update()">Save</button>
+        <button class="clear" onclick="cleared()">Clear</button>
+    </div>
+
+    <script>
+
+        let input = document.getElementById("data");
+
+        // Load data when page refreshes
+        window.onload = function(){
+            input.value = localStorage.getItem("info") || "";
+        }
+
+        function update(){
+            let data = input.value;
+            localStorage.setItem("info", data);
+            console.log("Saved!");
+        }
+
+        function cleared(){
+            localStorage.removeItem("info");
+            input.value = "";
+        }
+
+        // Save when Enter is pressed
+        input.addEventListener("keydown", function(e){
+            if(e.key === "Enter"){
+                update();
+            }
+        });
+
+    </script>
+
+</body>
+</html>

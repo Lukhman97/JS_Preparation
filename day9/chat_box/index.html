@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chatbot UI</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+.box {
+    width: 350px;
+    height: 650px;
+    margin: 20px auto;
+    background: #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin: 0 0 10px;
+}
+
+.chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.msg {
+    max-width: 70%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.user {
+    background: #cfd8dc;
+    align-self: flex-end;
+}
+
+.bot {
+    background: #ff8c42;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.input {
+    display: flex;
+    gap: 10px;
+}
+
+.input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #cfd8dc;
+}
+
+.input button {
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #cfd8dc;
+    font-size: 18px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Meet our Chatbot</h2>
+
+    <div class="chat" id="chat">
+        <div class="msg bot">Hi! I'm your chatbot</div>
+    </div>
+
+    <div class="input">
+        <input type="text" id="input" placeholder="Type a message...">
+        <button onclick="send()">➤</button>
+    </div>
+</div>
+
+<script>
+const replies = {
+    "hello": "Hello! 👋 How can I help you?",
+    "hi": "Hello! 👋 How can I help you?",
+    "how are you": "I'm just code, but I'm doing great 😄",
+    "name": "I'm your friendly chatbot 🤖",
+    "bye": "Goodbye! Have a nice day 👋"
+};
+
+function send() {
+    let input = document.getElementById("input");
+    let msg = input.value.trim().toLowerCase();
+    if (msg === "") return;
+
+    let chat = document.getElementById("chat");
+
+    let u = document.createElement("div");
+    u.className = "msg user";
+    u.innerText = msg;
+    chat.appendChild(u);
+
+    input.value = "";
+
+    let b = document.createElement("div");
+    b.className = "msg bot";
+    b.innerText = reply(msg);
+    chat.appendChild(b);
+
+   
+}
+
+function reply(msg) {
+    for (let key in replies) {
+        if (msg.includes(key)) return replies[key];
+    }
+    return "Sorry, I don't understand that 😅";
+}
+
+document.getElementById("input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") send();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .save {
+            background: green;
+            color: white;
+        }
+
+        .clear {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Local Storage</h3>
+
+        <input type="text" id="data" placeholder="Type something..."><br>
+        
+        <button class="save" onclick="update()">Save</button>
+        <button class="clear" onclick="cleared()">Clear</button>
+    </div>
+ 
+    <script>
+
+        let input = document.getElementById("data");
+
+        window.onload = function(){
+            input.value = localStorage.getItem("info") || "";
+        }
+
+        function update(){
+            localStorage.setItem("info", input.value);
+        }
+
+        function cleared(){
+            localStorage.removeItem("info");
+            input.value = "";
+        }
+
+        input.addEventListener("keydown", function(e){
+            if(e.key === "Enter"){
+                update();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
