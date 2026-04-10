@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function selectProduct() {
+    console.log("1. Selecting Product...");
+}
+
+function addToCart() {
+    console.log("2. Adding to Cart...");
+}
+
+function makePayment() {
+    console.log("3. Making Payment...");
+}
+
+function orderConfirmation() {
+    console.log("4. Order Confirmed!");
+}
+
+function deliverOrder() {
+    console.log("5. Order Delivered!");
+}
+
+selectProduct();
+addToCart();
+makePayment();
+orderConfirmation();
+deliverOrder();
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- FIRST IAM GOING DISCUSS ABOUT 4 COMPOENTS TAHT YOU SRE ALREADY KNOW I WILL JUST ADDRESSS THEM FOR CLEAR UNDERSTANDING OF THE BOM CONCPET
+ 1.WEBPAGE--/AN WEBPGE IS AN VISUAL REPRENSTATION OF AN DOCUMENT THAT IS WRITING USING HTML OR CSS OR JS 
+ 2.document--/AN DOCUMENT IS AN HTML FILE THAT IS LOADED ON THE BROWSWER
+ 3.BROWSER--/A BRPWSER IS AN SOFTWARE APPLICATION THAT IS USEED TO ACCESS ,LOAD AND INTRACT WITH WEB DOCUMETS LIKE HTML,CSS AND JS
+ 4.WINDOW----/IT IS AN ONE OF THE MAIN OBJECT MEANS IT IS THE ROOT OBJECT
+                ALL THE OTHER TYPES TYPE OF OBJECT COMES UNDER THIS
+                /A COLLECTION OF MULTIPLE WINDOWS IS JKNOW AS WINDOW....
+DOM----/A DOM IS USED TO COONNECT JS WITH HTML AND CSS
+       /CONTROLS AND MANIPILATE SDTHE WEBPAGE CONTENDT THROUGH ELEMETS
+BOM---/BOM IS USED TO COONNECT THE JS TO THE BROSWER
+      /IT ALLOW JS TO CONTROL THINGS LIKE LOAD,URL,HOISTORY.....
+      BOM WILL ACTS AS AN BORDER FOR AN DOM
+      ....
+    why bom----it is used to control and aces the information of broswer...
+      ....
+      1.window---/innerheight,innerwidth
+      2.documnets--/as we know all the  dom methsods comes here...
+      3.navigation.../as we already know .useragent,online,language,platform..
+      4.location.../.href,hostname.pathname,port,origin,hash,reload(),assign(),replace()
+      5.screen---widtgh,hright,availheight,availwidth,pixeldepth,colordepth
+      6.session----   localstorage,sessionstorage
+      timing function......
+      pop-ups....... all these comes under bom beasuse they will works with the browswer   
+      -->
+
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      </head>
+      <body>
+        <script>
+            let counter = 30;
+            if (counter === 30) {
+            let counter = 31;
+            console.log(counter); // 31
+            }
+            console.log(counter); // 30 (because the variable in if block won't exist here)
+        </script>
+      </body>
+      </html>

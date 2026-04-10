@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function objecttoarray(obj){
+            let result=[]
+            for(let i in obj){
+                if(obj.hasOwnProperty(i)){
+                    result.push([i,obj[i]])
+
+                }
+            }
+            return result
+        }
+       
+        let person = {
+    name: "Lukhman",
+    age: 22,
+    city: "Hyderabad"
+};
+
+console.log(objecttoarray(person));
+
+        
+        
+    </script>
+</body>
+</html>
+ <!-- a=[5,3,1,4]
+        n=5
+        ab=0
+        total=n*(n+1)/2
+        for(i=0;i<a.length;i++){
+            ab+=a[i]
+
+            
+        
+            
+
+        }
+        miss=total-ab
+        console.log(miss) -->
+
+<!-- let c=1
+        for (i=65;i<=90;i++){
+            console.log(String.fromCharCode(i)+c)
+            c++
+        } -->
+        
+<!-- 
+let a=15
+        let b=169
+        let max=(a>b)?a:b
+        let lcm=max
+        while (true){
+            
+            if(lcm%a===0 && lcm%b===0){
+                break
+            }
+            lcm+=max
+            
+        }
+        console.log(lcm) -->
+
+<!-- 
+for(i=1;i<=6;i++){
+            ab=""
+            for(j=1;j<=i;j++){
+                ab+=i
+            }
+            console.log(ab)
+        } -->
+<!-- let a=4
+        let b=8
+        let c=2
+        let greatest=(a>b)?(a>c?a:c):(b>c?b:c)
+        console.log(greatest) -->
+
+        <!-- let n=5
+        // fact=1
+        // for(i=1;i<=5;i++){
+        //     fact*=i
+
+        // }
+        // console.log(fact) -->

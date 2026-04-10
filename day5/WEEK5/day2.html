@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="one">HELLO ARE YOU OKEY!!!!!!!!</h1>
+    <h1 class="one">WHERE ARE YOU FROM</h1>
+    <button onclick="fun()">click me</button>
+    <script>
+       
+        function fun(){
+            var greet=document.getElementsByClassName('one')
+             for (var i = 0; i < 2; i++) {
+                greet[i].innerHTML = "DOM Updated!";
+                greet[i].style.color = 'red';
+    }
+        }
+
+    </script>
+</body>
+</html>

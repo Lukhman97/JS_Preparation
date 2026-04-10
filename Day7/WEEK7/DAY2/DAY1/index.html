@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="buttoncolor()">
+     <form action="" name="myform" onsubmit=" return formValidation()">
+        NAME : <input type="text" name="username" id=""> <br><br>
+        Password : <input type="text" name="password"> <br><br>
+        <input type="submit" name="btn" value="Login">
+     </form>
+     <script>
+        function formValidation(){
+            var name=document.myform.username.value
+            var password=document.myform.password.value
+            if(name==null || name==""){
+                alert("Username is required......")
+                return false
+            }
+            else if(password==null || password==""){
+                alert("Password is required......")
+                return false
+            }
+            else{
+                alert("Logged in succesfully")
+                return true
+
+            }
+        }
+
+        function buttoncolor(){
+            var btn1=document.getElementsByName('btn')
+            btn1[0].style.color="blue"
+        }
+     </script>
+</body>
+</html>

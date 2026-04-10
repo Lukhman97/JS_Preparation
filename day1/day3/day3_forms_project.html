@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        
+
+
+      body {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    background-color: lightyellow;
+    width: 100%;
+    
+    padding: 20px;
+}
+
+form {
+    margin-left: 200px;
+    width: 600px;
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 60px;
+}
+
+label {
+    padding-right: 40px;
+    width: 400px;
+}
+
+
+
+#name,#mobile,#email,#age,#epassword,#dob,#file,#last2{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+}
+#last1{
+    background-color: red;
+}
+#last2{
+    background-color: green;
+    margin-left: 200px;
+    color:yellow
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        margin-left: 50px;
+        width: 90%;
+        padding: 30px;
+        border-radius: 30px;
+    }
+
+    label {
+        display: inline-block;
+        width: 120px;
+        padding-right: 10px;
+    }
+
+    #last2 {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .checkbox-group, .radio-group {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    h1{
+        color: red;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        margin-left: 10px;
+        padding: 20px;
+    }
+
+    label {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    #name, #mobile, #email, #age, #epassword, #dob, #file, #last2 {
+        width: 100%;
+    }
+
+    #last2, #last1 {
+        width: 48%;
+        margin-left: 0;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        color: red;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h1 >JOB APPLICATION</h1>
+        <form action="get"  >
+            <label for="name">NAME  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp; </label>&nbsp;&nbsp;
+            <input type="text" id="name" placeholder="Enter your name ">
+            <br><br>
+            <label for="mobile">MOBILE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="tel" id="mobile" placeholder="Enter your mobile number ">
+
+            <br><br>
+
+            <label for="email">E-MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp; </label>&nbsp;&nbsp;&nbsp;
+            <input type="email" id="email" placeholder="Enter your personal mail id ">
+            <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="age">AGE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  </label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" id="age" placeholder="Enter your age ">
+
+
+            <br><br>
+
+            <label for="epassword">PASSWORD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </label>
+            <input type="password" id="epassword" placeholder="Enter your password">
+            <br><br>
+            <label for="dob">DOB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="date" id="dob" placeholder="Enter your dob ">
+            
+            
+            <br><br>
+
+            <label for="file">RESUME&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" id="file" placeholder="upload your file">
+            <br><br>
+            <label>SKILLS :</label>
+
+                <input type="checkbox" id="python" name="skills" value="Python">
+                <label for="python">Python</label>
+
+                <input type="checkbox" id="java" name="skills" value="Java">
+                <label for="java">Java</label>
+
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+
+                <input type="checkbox" id="sql" name="skills" value="SQL">
+                <label for="sql">SQL</label>
+
+                <br><br>
+            
+            <label for="radio">GENDER</label>
+
+                <input type="radio" id="radio" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="radio" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="radio" name="gender" value="Other">
+                <label for="other">Other</label>
+                <br>
+                <br>
+
+                <textarea disabled name="" id="text">MAKE SURE ALL THE INFORMATION ABOVEE YOU ENTERED IS CORRECT</textarea>
+                <br>
+                <br>
+            <input type="reset" name="reset" id="last1">
+            <input type="submit" id="last2" >
+
+
+    
+            
+
+        </form>
+        
+    </div>
+</body>
+</html>

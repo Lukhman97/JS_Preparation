@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+</head>
+<body onload="buttoncolor()">
+
+     <form action="" name="signupForm" onsubmit="return signupValidation()">
+        
+        NAME : <input type="text" name="username"><br><br>
+
+        Email : <input type="text" name="email"><br><br>
+
+        Password : <input type="password" name="password"><br><br>
+
+        Re-Password : <input type="password" name="repassword"><br><br>
+
+        <input type="submit" name="btn" value="Signup">
+     </form>
+
+     <script>
+
+        function signupValidation() {
+
+            var name = document.signupForm.username.value;
+            var email = document.signupForm.email.value;
+            var password = document.signupForm.password.value;
+            var repassword = document.signupForm.repassword.value;
+
+            if (name == null || name == "") {
+                alert("Username is required");
+                return false;
+            }
+
+            if (email == null || email == "") {
+                alert("Email is required");
+                return false;
+            }
+
+            // email simple validation
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Enter a valid email");
+                return false;
+            }
+
+            if (password == null || password == "") {
+                alert("Password is required");
+                return false;
+            }
+
+            if (repassword == null || repassword == "") {
+                alert("Re-enter the password");
+                return false;
+            }
+
+            if (password !== repassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Signup Successful!");
+            return true;
+        }
+
+        function buttoncolor() {
+            var btn1 = document.getElementsByName('btn');
+            btn1[0].style.backgroundColor = "green";
+        }
+
+     </script>
+
+</body>
+</html>

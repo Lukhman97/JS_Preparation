@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="userList"></p>
+</body>
+<script>
+
+async function getUsers() {
+    const response = await fetch("https://fakestoreapi.com/products/");
+    const users = await response.json();
+
+    const list = document.getElementById("userList");
+
+    users.forEach(user => {
+        const li = document.createElement("li");
+        li.innerHTML="<b>" + user.title + "</b>";
+        list.appendChild(li);
+    });
+}
+
+async function addProduct() {
+    const newProduct={
+        title:"Lukhman shirt",
+        price:499,
+        description:"Nice shirt",
+        category:"men's clothing"
+    };
+    try{
+        const response=await fetch("https://fakestoreapi.com/products/",{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(newProduct)
+        });
+        if(!response.ok){
+            throw new Error("Failed to add product");
+
+        }
+        const data=await response.json();
+        console.log("Product added:",data);
+    }catch(error){
+        console.error("Error adding product:",error);
+    }
+    
+}
+
+    const user = {
+    name: "Lukhman",
+    age: 22
+};
+
+localStorage.setItem("user", JSON.stringify(user));
+const data = JSON.parse(localStorage.getItem("user"));
+console.log(data.name,data.age);
+</script>
+</html>

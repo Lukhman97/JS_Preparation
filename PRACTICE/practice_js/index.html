@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JALA Academy</title>
+
+<link rel="stylesheet" href="/css/dashboard.css">
+
+<!-- IMPORTANT: Enable Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-title">Magnus</div>
+  <a href="/index.html" class="logout" onclick="logoutUser()">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+  </a>
+</div>
+
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="profile">
+      <i class="fa-solid fa-circle-user"></i>
+      <div>
+        <strong>Guest User</strong><br>
+        <small>User</small>
+      </div>
+    </div>
+
+    <div class="menu">
+
+      <div class="menu-item">
+        <span><i class="fa-solid fa-house"></i> Home</span>
+      </div>
+
+      <!-- EMPLOYEE -->
+<div class="menu-item" onclick="toggleMenu('employeeMenu','empIcon')">
+  <span>
+    <i class="fa-solid fa-users"></i>
+    Employee
+  </span>
+  <i id="empIcon" class="fa-solid fa-chevron-left"></i>
+</div>
+
+<div id="employeeMenu" class="submenu">
+  <a href="/Pages/Employee/employeecreate.html">
+    <i class="fa-solid fa-pen-to-square"></i>
+    Create
+  </a>
+  <a href="#">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    Search
+  </a>
+</div>
+
+
+      <!-- MORE -->
+<div class="menu-item" onclick="toggleMenu('moreMenu','moreIcon')">
+  <span>
+    <i class="fa-solid fa-bars"></i>
+    More
+  </span>
+  <i id="moreIcon" class="fa-solid fa-chevron-left arrow"></i>
+</div>
+
+<div id="moreMenu" class="submenu">
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Multiple Tabs</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Menu</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Autocomplete</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Collapsible Content</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Images</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Slider</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Tooltips</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Popups</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> Links</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> CSS Properties</a>
+  <a href="#"><i class="fa-regular fa-thumbs-up"></i> iFrames</a>
+</div>
+
+
+      <div class="menu-item">
+        <span><i class="fa-solid fa-gear"></i> Settings</span>
+      </div>
+
+    </div>
+
+    
+</div>
+
+
+
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+    <main class="content">
+
+  <h1>Welcome to JALA Academy</h1>
+  <h3>The world's best up-skilling academy</h3>
+
+  <p><strong>
+    Do you want to learn Selenium/cucumber Automation completely with Practical Scenarios in 7 Days?
+    Use this website to find all the scenarios at one place.
+  </strong></p>
+
+  <p><b>
+    To understand or test RESTful APIs, use the JALA Academy FREE live APIs.
+    Search on Google with the keyword "JALA Academy Postman APIs"
+  </b></p>
+
+  <div class="info-box">
+    <p>
+      You learn Everything by doing projects if you are very serious to get a software job in 90 days
+      <a href="https://jalatechnologies.com" target="_blank">
+        http://jalatechnologies.com
+      </a>
+    </p>
+
+    <p>
+      Don't forget to read our website JALA Academy completely to know more opportunities
+    </p>
+  </div>
+
+  <div class="info-box small">
+    <div class="highlight">
+      If you are a working professional, Up-skill with JALA Academy Job Guarantee Programs
+      to keep your Job secure for 10 Years
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <strong>
+    Copyright © 2026 
+    <a href="https://jalatechnologies.com/" target="_blank">
+      JALA Technologies
+    </a>.
+  </strong>
+  All rights reserved.
+</footer>
+
+
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

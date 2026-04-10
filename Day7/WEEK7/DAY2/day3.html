@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function selectProduct(callback) {
+    console.log("1. Selecting product...");
+    callback();
+}
+
+function addToCart(callback) {
+    console.log("2. Adding to cart...");
+    callback();
+}
+
+function makePayment(callback) {
+    console.log("3. Making payment...");
+    callback();
+}
+
+function orderConfirmation(callback) {
+    console.log("4. Order confirmed!");
+    callback();
+}
+
+function deliverOrder() {
+    console.log("5. Order delivered!");
+}
+
+// Final callback chain
+selectProduct(() => {
+    addToCart(() => {
+        makePayment(() => {
+            orderConfirmation(() => {
+                deliverOrder();
+            });
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

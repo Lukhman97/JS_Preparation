@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function BoilWater(callback){
+            setTimeout(()=>{
+                console.log("Boiling the water.....1")
+                callback()
+            },5000)
+        }
+        function addNoodles(callback){
+            setTimeout(()=>{
+                console.log("Adding Noodles......2")
+                callback()
+            },2000)
+        }
+
+        function AddMasala(callback){
+            setTimeout(()=>{
+                console.log("Adding Masala.....3")
+                callback()
+            },2000)
+        }
+        function serve(){
+            setTimeout(()=>{
+                console.log("sereving the maggi.....4")
+                
+            },2000)
+        }
+        BoilWater(()=>{
+            addNoodles(()=>{
+                AddMasala(()=>{
+                    serve()
+                })
+            })
+        })
+    </script>
+</body>
+</html>
