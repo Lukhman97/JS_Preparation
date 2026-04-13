@@ -1,11 +1,8 @@
-// 1.named function: A function with fucntion keyword and function_name is known as named fucntion
-// example:
+
 function function_name(){
     console.log("It is a function......")
 }
 function_name()
-
-// 2.parametarized function : The function by passing parameters are know as perametarized function
 
 function parameterized_function(a,b){
     console.log(`The values of a and b is ${a},${b} and thei sum is ${a+b}`)

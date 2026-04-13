@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Practice More</title>
+</head>
+<body>
+
+<script>
+
+const multiply = (a,b) => a*b
+console.log(multiply(2,3))
+
+const greet = (name = "Guest") => "Hello " + name
+console.log(greet())
+console.log(greet("Ali"))
+
+const sum = (...nums) => nums.reduce((a,b) => a+b,0)
+console.log(sum(1,2,3,4))
+
+const a = [1,2]
+const b = [3,4]
+const merged = [...a,...b]
+console.log(merged)
+
+const user = {name:"Ali",age:22,city:"Delhi"}
+const {name,age} = user
+console.log(name,age)
+
+const arr = [10,20,30,40]
+const [first,,third] = arr
+console.log(first,third)
+
+const n = "Ali"
+const ag = 22
+console.log(`My name is ${n} and I am ${ag} years old`)
+
+const nums = [1,2,3,4]
+const doubled = nums.map(x => x*2)
+console.log(doubled)
+
+const filtered = [10,15,20,25].filter(x => x>15)
+console.log(filtered)
+
+const total = [1,2,3,4].reduce((a,b)=>a+b,0)
+console.log(total)
+
+class Car {
+    constructor(brand,price){
+        this.brand = brand
+        this.price = price
+    }
+    show(){
+        console.log(this.brand,this.price)
+    }
+}
+
+const c1 = new Car("BMW",50000)
+c1.show()
+
+class ElectricCar extends Car {
+    constructor(brand,price,battery){
+        super(brand,price)
+        this.battery = battery
+    }
+    info(){
+        console.log(this.battery)
+    }
+}
+
+const e1 = new ElectricCar("Tesla",80000,"100kWh")
+e1.show()
+e1.info()
+
+const promise = new Promise(res => {
+    setTimeout(()=>res("Done"),1000)
+})
+
+promise.then(x=>console.log(x))
+
+async function run(){
+    const data = await promise
+    console.log(data)
+}
+
+run()
+
+async function fetchData(){
+    const res = await fetch("https://jsonplaceholder.typicode.com/users")
+    const data = await res.json()
+    data.forEach(u => console.log(u.name))
+}
+
+fetchData()
+
+const set = new Set([1,2,2,3,4])
+console.log([...set])
+
+const map = new Map()
+map.set("name","Ali")
+map.set("age",22)
+console.log(map.get("name"))
+console.log(map.get("age"))
+
+for (let ch of "JavaScript"){
+    console.log(ch)
+}
+
+const user2 = {profile:{name:"Ali"}}
+console.log(user2?.profile?.name)
+
+console.log(2**5)
+
+const arr2 = [5,10,15]
+arr2.forEach(x=>console.log(x))
+
+const findVal = arr2.find(x=>x>10)
+console.log(findVal)
+
+const someVal = arr2.some(x=>x>12)
+console.log(someVal)
+
+const everyVal = arr2.every(x=>x>0)
+console.log(everyVal)
+
+const obj = {a:1,b:2}
+const newObj = {...obj,c:3}
+console.log(newObj)
+
+const str = "hello"
+console.log(str.repeat(3))
+
+const nums2 = [1,2,3]
+const [x,y,z] = nums2
+console.log(x,y,z)
+
+const fn = (a=1,b=2,c=3)=>a+b+c
+console.log(fn())
+console.log(fn(5,5,5))
+
+</script>
+
+</body>
+</html>
