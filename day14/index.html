@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js</title>
+</head>
+<body>
+
+
+
+<script>
+
+var name = "Lukhman"
+var age = 21
+var isStudent = true
+
+console.log(name)
+console.log(age)
+console.log(isStudent)
+
+var a = 10
+var b = 5
+
+console.log(a + b)
+console.log(a - b)
+console.log(a * b)
+console.log(a / b)
+
+if (age > 18) {
+    console.log("Adult")
+} else {
+    console.log("Minor")
+}
+
+for (var i = 1; i <= 5; i++) {
+    console.log(i)
+}
+
+var j = 1
+while (j <= 3) {
+    console.log(j)
+    j++
+}
+
+var fruits = ["apple", "banana", "mango"]
+
+console.log(fruits[0])
+console.log(fruits.length)
+
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i])
+}
+
+function greet(name) {
+    return "Hello " + name
+}
+
+console.log(greet("Lukhman"))
+
+function add(x, y) {
+    return x + y
+}
+
+console.log(add(3, 4))
+
+var person = {
+    name: "Ali",
+    age: 25
+}
+
+console.log(person.name)
+console.log(person.age)
+
+person.city = "Delhi"
+console.log(person.city)
+
+var num = 7
+
+if (num % 2 === 0) {
+    console.log("Even")
+} else {
+    console.log("Odd")
+}
+
+var str = "javascript"
+
+console.log(str.length)
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+
+var x = 5
+var y = "5"
+
+console.log(x == y)
+console.log(x === y)
+
+var marks = 85
+
+if (marks >= 90) {
+    console.log("A")
+} else if (marks >= 70) {
+    console.log("B")
+} else {
+    console.log("C")
+}
+
+function square(n) {
+    return n * n
+}
+
+console.log(square(6))
+
+var numbers = [1,2,3,4,5]
+
+var total = 0
+for (var i = 0; i < numbers.length; i++) {
+    total += numbers[i]
+}
+
+console.log(total)
+
+var i = 1
+do {
+    console.log(i)
+    i++
+} while (i <= 3)
+
+var text = "Hello"
+
+for (var i = 0; i < text.length; i++) {
+    console.log(text[i])
+}
+
+var arr = [10,20,30]
+
+arr.push(40)
+arr.pop()
+
+console.log(arr)
+
+function max(a,b) {
+    if (a > b) return a
+    else return b
+}
+
+console.log(max(10,20))
+
+var count = 0
+
+function increment() {
+    count++
+    console.log(count)
+}
+
+increment()
+increment()
+
+var temp = 30
+
+if (temp > 25) {
+    console.log("Hot")
+}
+
+var day = 2
+
+switch(day) {
+    case 1:
+        console.log("Monday")
+        break
+    case 2:
+        console.log("Tuesday")
+        break
+    default:
+        console.log("Other day")
+}
+
+var user = "admin"
+
+if (user === "admin") {
+    console.log("Welcome Admin")
+}
+
+var n = 5
+var fact = 1
+
+for (var i = 1; i <= n; i++) {
+    fact *= i
+}
+
+console.log(fact)
+
+function reverseString(s) {
+    var rev = ""
+    for (var i = s.length - 1; i >= 0; i--) {
+        rev += s[i]
+    }
+    return rev
+}
+
+console.log(reverseString("hello"))
+
+var arr2 = [5,3,8,1]
+
+for (var i = 0; i < arr2.length; i++) {
+    for (var j = i + 1; j < arr2.length; j++) {
+        if (arr2[i] > arr2[j]) {
+            var temp = arr2[i]
+            arr2[i] = arr2[j]
+            arr2[j] = temp
+        }
+    }
+}
+
+console.log(arr2)
+
+var num1 = 10
+
+if (num1 > 0) {
+    console.log("Positive")
+} else if (num1 < 0) {
+    console.log("Negative")
+} else {
+    console.log("Zero")
+}
+
+var vowels = "aeiou"
+var ch = "a"
+
+if (vowels.includes(ch)) {
+    console.log("Vowel")
+} else {
+    console.log("Consonant")
+}
+
+var sum2 = 0
+
+for (var i = 1; i <= 10; i++) {
+    sum2 += i
+}
+
+console.log(sum2)
+
+</script>
+
+</body>
+</html>

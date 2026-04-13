@@ -92,12 +92,13 @@
         }
 
     </style>
+
+
 </head>
 
 <body>
 
     <h2>Colorful CRUD Operation</h2>
-
     <form>
         <input type="text" id="name" placeholder="Enter your name">
         <input type="email" id="email" placeholder="Enter your email">
@@ -136,6 +137,7 @@
 
             document.getElementById('name').value = "";
             document.getElementById('email').value = "";
+            console.log(data)
         }
 
         function displayData() {
@@ -166,7 +168,11 @@
             data.splice(index, 1);
             displayData();
         }
+        
+
+
     </script>
 
 </body>
 </html>
+
